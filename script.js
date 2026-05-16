@@ -1,11 +1,99 @@
-// Scroll suave
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href'))
-            .scrollIntoView({ behavior: 'smooth' });
-    });
-});
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Gustavo Martins</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-// Mensagem no console
-console.log("Portfólio carregado com sucesso 🚀");
+    <header>
+        <div class="navbar-container">
+            <a href="#" class="logo">GM<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#skills" class="nav-link">Habilidades</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Olá, eu sou <br><span class="highlight-text">Gustavo Martins</span></h1>
+            <p class="subtitle">Desenvolvedor Web & Designer de Interfaces</p>
+            <p class="description">Transformando ideias em códigos limpos, designs modernos e aplicações de alto impacto.</p>
+            <div class="hero-buttons">
+                <a href="#sobre" class="btn btn-primary">Conhecer Mais</a>
+                <a href="#contato" class="btn btn-secondary">Fale Comigo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Sou um entusiasta da tecnologia focado em criar experiências digitais fluidas e intuitivas. Busco constantemente aprender novas ferramentas para entregar soluções eficientes e com excelente performance visual.</p>
+                <p>Atualmente dedico meu tempo desenvolvendo projetos autorais, estudando arquitetura de software e aprimorando minhas habilidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <h2 class="section-title">Minhas Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
+                <h3>HTML5</h3>
+                <p>Estruturação semântica e acessível.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt skill-icon" style="color: #264de4;"></i>
+                <h3>CSS3</h3>
+                <p>Estilizações modernas, Flexbox, Grid e Animações.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js-square skill-icon" style="color: #f7df1e;"></i>
+                <h3>JavaScript</h3>
+                <p>Dinamismo, manipulação do DOM e consumo de APIs.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-github skill-icon" style="color: #ffffff;"></i>
+                <h3>Git & GitHub</h3>
+                <p>Controle de versão e trabalho colaborativo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <h2 class="section-title">Vamos Conversar?</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem; color: #a0aec0;">
+            Estou disponível para projetos freelancers, oportunidades de emprego ou apenas para trocar uma ideia sobre tecnologia.
+        </p>
+        <div class="contact-links">
+            <a href="mailto:gustavodossantosmar@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i> E-mail
+            </a>
+            <a href="https://linkedin.com/in/gustavo-martins" target="_blank" class="contact-item">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/GusSMartins" target="_blank" class="contact-item">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gustavo Martins. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
